@@ -1,4 +1,8 @@
-<form [ngStyle]="{ 'margin-bottom': '40px' }" (ngSubmit)="onSubmit()">
+<form
+  *ngIf="showAddTask"
+  [ngStyle]="{ 'margin-bottom': '40px' }"
+  (ngSubmit)="onSubmit()"
+>
   <div class="form-control">
     <label for="text">Task</label>
     <input
